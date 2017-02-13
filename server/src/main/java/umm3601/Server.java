@@ -41,6 +41,10 @@ public class Server {
         redirect.get("", "/");
         redirect.get("/", "http://localhost:9000");
 
+        /*
+        Because we don't know how angular works, we are holding off on additonal redirects.
+         */
+
         // List users
         get("api/users", (req, res) -> {
             res.type("application/json");
