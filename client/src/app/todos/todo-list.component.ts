@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TodoListService } from "./todo-list.service";
 import { FormsModule } from '@angular/forms';
-import { FilterBy } from "./filter.pipe";
+import { FilterBy } from "../users/filter.pipe";
 
 @Component({
     selector: 'todo-list-component',
