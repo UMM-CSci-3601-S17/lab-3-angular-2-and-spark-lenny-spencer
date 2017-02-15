@@ -1,0 +1,34 @@
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info">
+        <h1>Filter By:</h1>
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>Name</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search0">
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>Age</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search1">
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>id</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search2">
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>Company</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search3">
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>Email</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search4">
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <p>Email</p>
+        <input #input type="text" placeholder="Filter" [(ngModel)]="search5">
+    </li>
+    <li class="list-group-item list-group-item-info">Filtered Todos</li>
+    <li *ngFor="let user of users | async | filterBy: {limit: search0} | filterBy: {status: search1} | filterBy: {contains: search2} | filterBy: {owner: search3} | filterBy: {catagory: search4} | filterBy: {_id: search5}" class="list-group-item">
+        {{ user.name }}
+    </li>
+</ul>
