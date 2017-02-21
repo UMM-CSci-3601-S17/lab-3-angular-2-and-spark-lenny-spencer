@@ -13,6 +13,8 @@ import java.io.IOException;
 public class Server {
     public static void main(String[] args) throws IOException {
 
+        port(5678);
+
         Gson gson = new Gson();
         UserController userController = new UserController();
         ToDoController toDoController = new ToDoController();
