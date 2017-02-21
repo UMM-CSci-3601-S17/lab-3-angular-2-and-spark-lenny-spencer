@@ -10,7 +10,7 @@ import { FilterBy } from "../users/filter.pipe";
 })
 
 export class TodoListComponent {
-    private todos: any;
+    public todos: any;
 
     constructor(private _todoListService: TodoListService) {
         this.todos = _todoListService.getTodos();
